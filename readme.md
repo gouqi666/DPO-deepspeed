@@ -30,7 +30,7 @@ you can change different data_splits to avoid data leak during sft and dpo train
 **Evaluation**
 Here we provide some evaluation scripts, you can refer to `training/step1_supervised_finetuning/eval_sft.py` and `training/step1_supervised_finetuning/prompt_eval.py`
 
-#Running Reward Modeling
+# Running Reward Modeling
 Model:Here we provide a llama2 sft version, you can change any huggingface model by change `model_name_or_path`  
 Datasets: now we provide HelpfulRLHFDataset, HarmlessRLHFDataset, etc. just change the `data_path` to your datasets location. If you want to add new dataset, you should add a new DataClass in the `./utils/data/raw_datasets.py` and cite it in `./utils/data/data_utils.py`    
 Running Reward Modeling   
@@ -39,7 +39,7 @@ Running Reward Modeling
 **Evaluation**   
 refer to `training/step2_reward_model_finetuning/rw_eval.py`
 
-#Running DPO
+# Running DPO
 Model:Change your `model_name_or_path` to your sft model path in the stage1 training!  
 Datasets: now we provide HelpfulRLHFDataset, HarmlessRLHFDataset, etc. just change the `data_path` to your datasets location. If you want to add new dataset, you should add a new DataClass in the `./utils/data/raw_datasets.py` and cite it in `./utils/data/data_utils.py`    
 **Running DPO**  
